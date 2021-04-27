@@ -1,0 +1,22 @@
+<div data-title="home" class="strollcontent strollcontent-centered">
+    <div class="container">
+        <img src="/media/profile.jpg" alt="Profile"
+             style="width: 50%; max-width: 300px; border-radius: 50%; border: 2px solid transparent; margin-top: 4px; color: rgba(255,255,255,0.2);"
+             align="center" />
+        <div id="home-message">
+            <p>Hello! I'm Isaac Struhl.</p>
+	    <br>
+            <p>Use the menu below or <span id="navhint-1">arrow keys</span> to navigate this site.</p>
+	    <p><span id="navhint-2">The down arrow</span> will always take you to external links ⧉.</p>
+            <p>Thanks to <a href="https://george.moe">George Moe</a> for inspiration for this website's design!</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    if ("ontouchstart" in window) {
+        document.getElementById("navhint-1").innerHTML = "swipe";
+        document.getElementById("navhint-2").innerHTML = "Swiping down";
+    }
+</script>
+

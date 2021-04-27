@@ -1,0 +1,32 @@
+<div data-title="projects" class="strollcontent">
+    <div class="container">
+        <h1>Projects</h1>
+        <h2>Personal</h2>
+        <div class="text">
+            <strong><a href="https://github.com/iostruhl/no-curses">Oh Hell</a></strong>
+            <p>Oh Hell is my favorite card game. My dad taught me this game when I was 7 years old, and I've played it pretty consistently ever since. During the summer of 2019, my friends and I were on opposite sides of the country, so I (along with <a href="https://github.com/agmariona">Alexander Mariona</a>) created this server-synchronized, terminal (curses) graphics, automatic-score-logging version. This is actually the second version in which the clients are (mostly) stateless and reflect the ground truth computed by the central server. Our initial attempt was far more hacky, has some serious bugs, and for some reason has been forked more times on github despite large deprecation warnings. ¯\_(ツ)_/¯</p>
+            <br>
+            <strong><a href="https://www.youtube.com/watch?v=wMl-b5JTPhg">Scribble</a></strong>
+            <p>This was a hackathon project along with <a href="https://george.moe">George Moe</a> and <a href="https://alexwulff.com">Alex Wulff</a>, inspired by being inspired by graffiti, and our lack of inspiration for graffiti once the paint has started to wear off (and the fact that it's an immense amount of work to continuously clean buildings, as many public and private institutions do on a regular basis). We also wanted to use Apple's ARKit, which had just recently come out. With Scribble you can virtually spray paint on real surfaces, which are then saved in a database (until our free credit runs out) and can persist both for you across graffiti sessions and can contribute to a single, collaborative, virtual space. It also kinda works!</p>
+            <br>
+            <strong><a href="https://github.com/iostruhl/war">War</a></strong>
+            <p>Another card game, one that everyone has fond memories of but for the life of me I don't understand why. How many iterations does an average game of war take, and what is the distribution? Here's a very quick simulation that calculates exactly this. As it turns out, war is often fun, but sometimes it's very, very, very not fun. And sometimes it never ends, unless you're my code, in which case player 1 wins.</p>
+            <br>
+        </div>
+        <h2>Academic</h2>
+        <div class="text">
+            <strong><a href="https://iostruhl.com/sporcle50/">Sporcle50</a></strong>
+            <p>Probably the most useful of my personal projects, Sporcle50 allows you to upload a set of pictures of people's faces, and the quiz yourself on them. I initially used this to memorize the names of students in my CS50 section, but have since used it to memorize a bunch more small groups of people. It's surprisingly efficient, and if you're terrible with faces as I am, pretty useful as well!</p>
+            <br>
+            <strong><a href="https://www.youtube.com/watch?v=bBC9Y6sRYs4">Arrec</a></strong>
+            <p>Another iteration of "I don't know who anyone is and would like to", this project lets you point a camera at a group of people and identify everyone based on a database of a single photo per person. We created this database with the express permission of the Harvard students involved, and for obvious reasons are not releasing it, but it was a fun project nonetheless. This was my first image-based machine learning project and I learned a lot from it!</p>
+            <br>
+            <strong><a href="https://github.com/iostruhl/struhl-section-code">Intro CS Materials</a></strong>
+            <p>I made some custom exercises to help people learn C as a first language. The idea is to (a) learn basic programming syntax and structure, (b) show that experimentation is often the fastest way to figure out new things about a language, and (c) introduce memory layout and C-style raw pointers in a simple way, which is often the most difficult subject for new students to grasp.</p>
+            <br>
+            <strong>Undervisor</strong>
+            <p>This was my research project for Harvard PRISE 2020. Here's the abstract:</p>
+            <p>Rapid industry adoption of execution of code on remote machines (cloud computing) has brought to light security challenges associated with the lack of trust in privileged software. Intel's Software Guard Extensions (SGX) can prevent privileged code from accessing certain program state by sequestering a region of memory (an enclave) that only the program itself can access, but this restriction means that run-time security checks, such as enforcing control flow integrity (CFI), must run from within the enclave itself. This study aims to remove this restriction by adding an undervisor: a module that, on an isolated set of hardware resources, can examine the register state of a program running on the main processor, perform real-time security checks, and preempt malicious code execution. We created a software testbed for implementation of top-half processes along with associated monitor policies, and we implemented standard security policies running in the undervisor, including a shadow stack and forward-edge CFI. We found that enforcement of these security policies without having access to the top-half process memory is possible and easily expressible in the logic of the undervisor. Furthermore, we show that monitor policies can be automatically generated at compile time, which reduces software development overhead to the equivalent of current compiler-generated security checks. These results suggest that undervisors are a viable security technique for small binaries without a high density of monitored instructions. However, it remains to be seen what hardware designs or compromises must be made and how more complex (or more concurrently running) monitor policies will perform at scale, particularly with respect to their impact on the running time of top-half code.</p>
+        </div>
+   </div>
+</div>
