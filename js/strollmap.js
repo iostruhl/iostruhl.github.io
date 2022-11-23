@@ -59,6 +59,11 @@ const strollmap = {
             left: "home",
         },
     },
+    "print": {
+        type: "link",
+        hname: "Public Print",
+        href: "https://drive.google.com/drive/folders/1z0xEB2a5ensx2BWbXJU7MUGH7AxXlUbS?usp=share_link",
+    },
 };
 
 function begin() {
