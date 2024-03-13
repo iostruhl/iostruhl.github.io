@@ -1,0 +1,15 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE labels (
+    name text primary key,
+    color text not null,
+    logic text not null
+, is_deleted boolean default false);
+INSERT INTO labels VALUES('Noise','#FFCAF6','{"and": [{"<": [{"var": "am_coefficient"}, 0.2]}, {"<": [{"var": "fm_coefficient"}, 0.2]}, {"<": [{"var": "pm_coefficient"}, 0.2]}, {"<": [{"var": "analog_ness"}, 0.2]}, {"<": [{"var": "digital_ness"}, 0.2]}]}',0);
+INSERT INTO labels VALUES('FM Radio','#CCF1DB','{"and": [{">": [{"var": "fm_coefficient"}, 0.8]}, {">": [{"var": "analog_ness"}, 0.8]}, {">": [{"var": "digital_ness"}, 0.8]}, {"<=": [80000000, {"var": "center_frequency"}, 120000000]}]}',0);
+INSERT INTO labels VALUES('Cell Phone Uplink','#FFDECA','{"and": [{">": [{"var": "am_coefficient"}, 0.8]}, {">": [{"var": "digital_ness"}, 0.8]}, {">": [{"var": "constellation_prob"}, 0.8]}, {"<": [{"var": "center_frequency"}, 2200000000]}]}',0);
+INSERT INTO labels VALUES('PTT Radio','#B5F9FF','{"and": [{">": [{"var": "fm_coefficient"}, 0.8]}, {"<": [{"var": "am_coefficient"}, 0.2]}, {"<": [{"var": "pm_coefficient"}, 0.2]}, {">": [{"var": "analog_ness"}, 0.8]}, {"<": [{"var": "digital_ness"}, 0.2]}]}',0);
+INSERT INTO labels VALUES('LoRa','#CCF1DB','{"and": [{">": [{"var": "digital_ness"}, 0.8]}, {"<": [{"var": "analog_ness"}, 0.2]}, {">": [{"var": "chirpiness"}, 0.8]}, {">": [{"var": "fm_coefficient"}, 0.8]}, {"<": [{"var": "am_coefficient"}, 0.2]}, {"<": [{"var": "pm_coefficient"}, 0.2]}]}',0);
+INSERT INTO labels VALUES('Bluetooth','#F7F7F7','{"and": [{">": [{"var": "center_frequency"}, 2100000000]}, {"<": [{"var": "am_coefficient"}, 0.2]}, {">": [{"var": "pm_coefficient"}, 0.8]}, {"<": [{"var": "fm_coefficient"}, 0.2]}, {"<": [{"var": "analog_ness"}, 0.2]}, {">": [{"var": "digital_ness"}, 0.8]}, {">": [{"var": "constellation_prob"}, 0.7]}]}',0);
+INSERT INTO labels VALUES('WiFi','#FFF5AD','{"and": [{">": [{"var": "center_frequency"}, 2100000000]}, {">": [{"var": "am_coefficient"}, 0.8]}, {"<": [{"var": "fm_coefficient"}, 0.2]}, {"<": [{"var": "pm_coefficient"}, 0.2]}, {">": [{"var": "constellation_prob"}, 0.8]}, {">": [{"var": "digital_ness"}, 0.8]}, {"<": [{"var": "analog_ness"}, 0.2]}]}',0);
+COMMIT;
